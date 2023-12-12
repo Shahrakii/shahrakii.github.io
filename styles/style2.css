@@ -1,10 +1,10 @@
 body {
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
     font-weight: 700;
     background: url(../images/wood.jpg);
     background-size: cover;
-    font-family: 'Indie Flower', cursive;
 
 }
 
