@@ -125,7 +125,7 @@ input {
     background: linear-gradient(to bottom left,#966F33, #ff69b4);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1000px) {
     body {
         background: linear-gradient(to   right,#654ea3,#eaafc8);
         margin-left: -15px;
