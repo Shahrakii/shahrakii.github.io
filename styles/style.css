@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden; 
 }
 
 body {
     counter-reset: click; 
-    overflow: hidden;  
     background-color: black;
     font-family: sans-serif;
 }
