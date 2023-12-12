@@ -5,7 +5,7 @@
 }
 
 body {
-    counter-reset: click;  
+    counter-reset: click; 
     background-color: black;
     font-family: sans-serif;
 }
@@ -186,11 +186,10 @@ input::before {
 
 @media (max-width: 400px) {
     .bar {display: none;}
-    input::before 
-    {left: 265px; width: 300px; height: 340px;}
+    input::before {left: 265px; width: 300px; height: 340px;}
 
     input {
-        margin-left: 50px;
+        margin-left: 0px;
     }
     .again {left: 90px;}
     .again2{left: 300px;}
