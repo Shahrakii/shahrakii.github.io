@@ -6,7 +6,6 @@
 
 body {
     counter-reset: click; 
-    overflow: hidden;  
     background-color: black;
     font-family: sans-serif;
 }
