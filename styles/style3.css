@@ -1,14 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
     counter-reset: click; 
     overflow: hidden;  
     background-color: black;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    font-family: sans-serif;
 }
 
 
@@ -23,14 +23,14 @@ body {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
     z-index: -1;
-    animation: shown 1.8s linear 10s 1 forwards;
+    animation: shown 1.8s linear 5s 1 forwards;
 }
 
 input {
     position: absolute;
     left: 0;
     margin-top: 150px;
-    animation: shown 1s linear 10s 1 forwards;
+    animation: shown 1s linear 5s 1 forwards;
     margin-left: 760px;
 }
 
@@ -48,13 +48,13 @@ input:checked {
     z-index: 100;
     top: 0;
     right: 0;
-    animation: shown 1s linear 10s 1 forwards;
+    animation: shown 1s linear 5s 1 forwards;
     z-index: -1;
 }
 
 .count::before {
     content: "";
-    animation: countdown 10s step-end 1 forwards;
+    animation: countdown 5s step-end 1 forwards;
 }
 
 @keyframes countdown {
@@ -69,7 +69,7 @@ input:checked {
 .gameover {
     position: absolute;
     opacity: 0;
-    animation: shown 0s linear 10s 1 forwards;
+    animation: shown 0s linear 5s 1 forwards;
     z-index: -1;
     top: 0;
     width: 100vw;
@@ -86,7 +86,7 @@ input:checked {
     position: absolute;
     opacity: 0;
     z-index: -1;
-    animation: shown 2s linear 10s 1 forwards;
+    animation: shown 2s linear 5s 1 forwards;
     margin-top: 100px;
     left: 585px;
 }
@@ -110,13 +110,13 @@ input:checked {
     font-size: 25px;
     position: absolute;
     opacity: 0;
-    animation: shown 2s linear 10s 1 forwards;
+    animation: shown 2s linear 5s 1 forwards;
     margin-top: 100px;
     left: 515px;
 }
 
 .box {
-    animation: gone 1s linear 10s 1 forwards;
+    animation: gone 1s linear 5s 1 forwards;
 }
 
 @keyframes shown {
@@ -136,7 +136,7 @@ input:checked {
     z-index: 100;
     top: 0;
     position: absolute;
-    animation: shown 1s linear 10s 1 forwards;
+    animation: shown 1s linear 5s 1 forwards;
     z-index: -1;
 }
 
@@ -145,7 +145,7 @@ input:checked {
     display: block;
     background-color: gray;
     height: 20px;
-    animation: bar 10s linear forwards;
+    animation: bar 5s linear forwards;
 }
 
 @keyframes bar {
@@ -173,17 +173,14 @@ input::before {
     to { display: none;}
 }
 
-@media (max-width: 400px) {
-    .bar {display: none;}
-    input::before 
-    {left: 265px; width: 300px; height: 340px;}
-
-    input {
-        margin-left: 50px;
+@media (max-width: 1005px) {
+    input::before {left: -290px; width: 350px;}
+    .bar {
+        left: -290px;
     }
     .again {left: 90px;}
-    .again2{left: 300px;}
-    .in-box {margin-left: -20px;}
+    .again2{left: 380px;}
+    .in-box2{left: 150px;}
 }
 
 
@@ -200,16 +197,12 @@ input::before {
     .in-box {margin-left: -20px;}
 }
 
+
 @keyframes countdown {
-    0%  {content: "10";}
-    10% {content: "9";}
-    20% {content: "8";}
-    30% {content: "7";}
-    40% {content: "6";}
-    50% {content: "5";}
-    60% {content: "4";}
-    70% {content: "3";}
-    80% {content: "2";}
-    90% {content: "1";}
-    100%{content: "0";}
+    0%  {content: "5";}
+    20% {content: "4";}
+    40% {content: "3";}
+    60% {content: "2";}
+    80% {content: "1";}
+    100% {content: "0";}
 }
