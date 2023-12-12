@@ -173,14 +173,17 @@ input::before {
     to { display: none;}
 }
 
-@media (max-width: 1005px) {
-    input::before {left: -290px; width: 350px;}
-    .bar {
-        left: -290px;
+@media (max-width: 400px) {
+    .bar {display: none;}
+    input::before 
+    {left: 265px; width: 300px; height: 340px;}
+
+    input {
+        margin-left: 50px;
     }
     .again {left: 90px;}
-    .again2{left: 380px;}
-    .in-box2{left: 150px;}
+    .again2{left: 300px;}
+    .in-box {margin-left: -20px;}
 }
 
 
