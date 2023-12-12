@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    counter-reset: click; 
+    overflow: hidden;  
+    background-color: black;
+    font-family: sans-serif;
+}
+
+
+.score::before {
+    content: counter(click)"/100";
+    color: white;
+    font-size: 65px;
+    padding: 5px;
+    background-color: brown;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: -1;
+    animation: shown 1.8s linear 15s 1 forwards;
+}
+
+input {
+    position: absolute;
+    left: 0;
+    margin-top: 150px;
+    animation: shown 1s linear 15s 1 forwards;
+    margin-left: 760px;
+}
+
+input:checked {
+    counter-increment: click;
+    margin-left: 11111px;
+}
+
+
+.count_down {
+    font-size: 40px;
+    font-weight: 700;
+    color: #6942f5;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    animation: shown 1s linear 15s 1 forwards;
+    z-index: -1;
+}
+
+.count::before {
+    content: "";
+    animation: countdown 15s step-end 1 forwards;
+}
+
+@keyframes countdown {
+    0%  {content: "5";}
+    20% {content: "4";}
+    40% {content: "3";}
+    60% {content: "2";}
+    80% {content: "1";}
+    100% {content: "0";}
+}
+
+.gameover {
+    position: absolute;
+    opacity: 0;
+    animation: shown 0s linear 15s 1 forwards;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+.in-box2 {
+    color: #6942f5;
+    font-size: 25px;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    animation: shown 2s linear 15s 1 forwards;
+    margin-top: 100px;
+    left: 585px;
+}
+
+.in-box {
+    margin-left: 10px;
+}
+
+.in-box::after {
+    content:  counter(click)"/100";
+    margin-left: 10px;
+}
+
+@keyframes shown {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.again {
+    color: #f54242;
+    font-size: 25px;
+    position: absolute;
+    opacity: 0;
+    animation: shown 2s linear 15s 1 forwards;
+    margin-top: 100px;
+    left: 515px;
+}
+
+.box {
+    animation: gone 1s linear 15s 1 forwards;
+}
+
+@keyframes shown {
+    from{opacity: 0;}
+    to{opacity: 1; z-index: 100;}
+}
+
+.again2 {
+    left: 775px;
+}
+
+.bar {
+    width: 900px;
+    height: 20px;
+    border: 2px solid white;
+    margin-left: 270px;
+    z-index: 100;
+    top: 0;
+    position: absolute;
+    animation: shown 1s linear 15s 1 forwards;
+    z-index: -1;
+}
+
+.bar::before {
+    content: "";
+    display: block;
+    background-color: gray;
+    height: 20px;
+    animation: bar 15s linear forwards;
+}
+
+@keyframes bar {
+    0% {width: 0%;}
+    85% {background-color: gray; width: 85%;}
+    90% {background-color: red; width: 90%;}
+    100% {background-color: red; width: 100%;}
+}
+
+
+input::before {
+    content: "";
+    background-color: #32cd32;
+    position: absolute;
+    width:  31.2vw;
+    height: 70vh;
+    margin-left: -264.5px;
+    left: 0;
+    z-index: 100;
+}
+
+
+.gone {
+    from {display: block;}
+    to { display: none;}
+}
+
+@media (max-width: 1005px) {
+    input::before {left: -290px; width: 350px;}
+    .bar {
+        left: -290px;
+    }
+    .again {left: 90px;}
+    .again2{left: 380px;}
+    .in-box2{left: 150px;}
+}
+
+
+
+@media (max-width: 400px) {
+    .bar {display: none;}
+    input::before {left: 265px; width: 300px; height: 340px;}
+
+    input {
+        margin-left: 0px;
+    }
+    .again {left: 90px;}
+    .again2{left: 300px;}
+    .in-box {margin-left: -20px;}
+}
+
+@keyframes countdown {
+    0%  {content: "15";}
+    6%  {content: "14";}
+    12% {content: "13";}
+    18% {content: "12";}
+    24% {content: "11";}
+    30% {content: "10";}
+    36% {content: "9";}
+    42% {content: "8";}
+    49% {content: "7";}
+    54% {content: "6";}
+    60% {content: "5";}
+    66% {content: "4";}
+    78% {content: "3";}
+    84% {content: "2";}
+    90% {content: "1";}
+    96% {content: "0";}
+    102% {content: "0";}
+}

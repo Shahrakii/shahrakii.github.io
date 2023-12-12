@@ -1,0 +1,159 @@
+body {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background: url(../images/wood.jpg);
+    background-size: cover;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+.menu-game-list {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+
+
+.menu-game-item-li {
+    list-style: none;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.menu-game-item {
+    cursor: pointer;
+}
+
+
+
+.menu-game-item {
+    background: linear-gradient(to top right,#966F33, #ff69b4);
+    line-height: 2;
+    padding: 5px;
+    color: white;
+    border-radius: 15px;
+}
+
+.item {
+    padding: 20px 50px;
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#startgame:checked~.game-menu-start,
+#howtoplay:checked~#popup1,
+#whoiam:checked~#popup2 {
+    display: block;
+}
+
+
+.popup {
+    background-color: lightblue;
+    padding: 55px;
+    color: black;
+    display: none;
+    overflow: hidden;
+    border-radius: 15px;
+    text-align: center
+}
+
+input {
+    display: none;
+}
+
+.who {
+    color: #8a2be2;
+}
+
+input:checked~.popup {
+    animation: op 0.3s linear forwards;
+}
+
+@keyframes op {
+    from {width: 0px; height: 0px;}
+    to {width: 450px; height: 250px;}
+}
+
+
+.popup {
+    background-color: lightblue;
+    padding: 55px;
+    color: black;
+    display: none;
+    overflow: hidden;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: -350px;
+}
+
+input {
+    display: none;
+}
+
+.who {
+    color: #8a2be2;
+}
+
+
+
+
+@media (max-width: 1075px) {
+    body {
+        background-color: #00DBDE;
+        background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        
+    }
+}
+
+.menu-game-item {
+    transition: background 2s;
+}
+
+.menu-game-item:hover {
+    transition: all 0.5s;
+    background: linear-gradient(to bottom left,#966F33, #ff69b4);
+}
+
+@media (max-width: 400px) {
+    body {
+        background: linear-gradient(to   right,#654ea3,#eaafc8);
+        margin-left: -15px;
+    }
+
+    .item {
+        font-size: 25px;
+    }
+
+    .menu-game-list {
+        gap: 60px;
+    }
+
+        .popup {
+            font-size: 25px;
+            margin-top: -445px;
+            z-index: 100;
+            border-radius: 0px;
+            margin-left: 15px;
+        }
+
+        input:checked~.popup {
+            animation: op2 0.3s linear forwards;
+        }
+        
+        
+        @keyframes op2 {
+            from {width: 0px; height: 0px; display: none;}
+            to {width: 310px; height: 620px; display: block;}
+        }
+}
