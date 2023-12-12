@@ -189,7 +189,7 @@ input::before {
     input::before {left: 265px; width: 300px; height: 340px;}
 
     input {
-        margin-left: 0px;
+        margin-left: 50px;
     }
     .again {left: 90px;}
     .again2{left: 300px;}
