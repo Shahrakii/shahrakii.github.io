@@ -132,7 +132,7 @@ input {
     }
 
     .item {
-        font-size: 25px;
+        font-size: 100%;
     }
 
     .menu-game-list {
@@ -140,7 +140,7 @@ input {
     }
 
         .popup {
-            font-size: 25px;
+            font-size: 100%;
             margin-top: -445px;
             z-index: 100;
             border-radius: 0px;
