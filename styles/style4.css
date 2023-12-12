@@ -1,14 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
-    counter-reset: click; 
-    overflow: hidden;  
+    counter-reset: click;  
     background-color: black;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    font-family: sans-serif;
 }
 
 
@@ -187,10 +186,11 @@ input::before {
 
 @media (max-width: 400px) {
     .bar {display: none;}
-    input::before {left: 265px; width: 300px; height: 340px;}
+    input::before 
+    {left: 265px; width: 300px; height: 340px;}
 
     input {
-        margin-left: 0px;
+        margin-left: 50px;
     }
     .again {left: 90px;}
     .again2{left: 300px;}
