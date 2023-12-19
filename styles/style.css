@@ -184,9 +184,8 @@ input::before {
 @media (max-width: 500px) {
     .bar {display: none;}
     input::before {left: 265px; width: 300px; height: 340px;}
-
     input {
-        margin-left: 0px;
+        margin-left: 40px;
     }
     .again {left: 90px;}
     .again2{left: 300px;}
