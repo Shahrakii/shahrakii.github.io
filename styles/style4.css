@@ -229,6 +229,7 @@ input::before {
         width: 0px;
         z-index: -1;
         height: 0px;
+                position: absolute;
     }
 
     .again {
