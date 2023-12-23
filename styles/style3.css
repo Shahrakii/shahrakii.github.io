@@ -180,7 +180,6 @@ input::before {
 }
 
 
-
 @media (max-width: 500px) {
     .bar {display: none;}
     input::before {left: 265px; width: 300px; height: 340px;}
@@ -199,7 +198,7 @@ input::before {
     .game {
         position: absolute;
         opacity: 0;
-        animation: shown 0s linear 10s 1 forwards;
+        animation: shown 0s linear 5s 1 forwards;
         z-index: -1;
         top: 0;
         width: 100vw;
@@ -207,7 +206,10 @@ input::before {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: white;
+        background: linear-gradient(to right,
+        #da4453, 
+        #89216b);
+        color: white;
     }
 
     .game::before {
@@ -225,11 +227,12 @@ input::before {
     }
 
     .again img {
-        margin-top: 450px;  
+        margin-top: 250px;  
         width: 0px;
         z-index: -1;
         height: 0px;
         position: absolute;
+        margin-left: 13px;
     }
 
     .again {
@@ -239,12 +242,6 @@ input::before {
     .again2 {
         left: 300px;
     }
-}
-
-.again img {
-    height: 30px!important;
-    width:  30px!important;
-    animation: shown2 1s linear 10s 1 forwards;
 }
 
 @keyframes shown {
