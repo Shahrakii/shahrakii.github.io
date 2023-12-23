@@ -199,7 +199,7 @@ input::before {
     .game {
         position: absolute;
         opacity: 0;
-        animation: shown 0s linear 5s 1 forwards;
+        animation: shown 0s linear 15s 1 forwards;
         z-index: -1;
         top: 0;
         width: 100vw;
@@ -228,7 +228,7 @@ input::before {
     }
 
     .again img {
-        margin-top: 200px;  
+        margin-top: 230px;  
         width: 0px;
         z-index: -1;
         height: 0px;
