@@ -198,7 +198,7 @@ input::before {
     .game {
         position: absolute;
         opacity: 0;
-        animation: shown 0s linear 5s 1 forwards;
+        animation: shown 0s linear 15s 1 forwards;
         z-index: -1;
         top: 0;
         width: 100vw;
