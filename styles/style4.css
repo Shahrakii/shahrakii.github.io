@@ -35,7 +35,7 @@ input {
 
 input:checked {
     counter-increment: click;
-    margin-left: 11111px;
+    left: 11111px;
 }
 
 
