@@ -7,7 +7,7 @@ body {
     counter-reset: click; 
     overflow: hidden;  
     background-color: black;
-font-family: 'Exo 2', sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 
 
@@ -180,6 +180,7 @@ input::before {
 }
 
 
+
 @media (max-width: 500px) {
     .bar {display: none;}
     input::before {left: 265px; width: 300px; height: 340px;}
@@ -198,7 +199,7 @@ input::before {
     .game {
         position: absolute;
         opacity: 0;
-        animation: shown 0s linear 15s 1 forwards;
+        animation: shown 0s linear 10s 1 forwards;
         z-index: -1;
         top: 0;
         width: 100vw;
@@ -242,6 +243,12 @@ input::before {
     .again2 {
         left: 300px;
     }
+}
+
+.again img {
+    height: 30px!important;
+    width:  30px!important;
+    animation: shown2 1s linear 10s 1 forwards;
 }
 
 @keyframes shown {
