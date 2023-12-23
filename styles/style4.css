@@ -85,8 +85,8 @@ input:checked {
     position: absolute;
     opacity: 0;
     z-index: -1;
+    top: 80px;
     animation: shown 2s linear 15s 1 forwards;
-    margin-top: 100px;
     left: 585px;
 }
 
@@ -104,25 +104,12 @@ input:checked {
     to{opacity: 0;}
 }
 
-.again {
-    color: #f54242;
-    font-size: 25px;
-    position: absolute;
-    opacity: 0;
-    animation: shown 2s linear 15s 1 forwards;
-    margin-top: 100px;
-    left: 535px;
-    z-index: -1;
-}
-
 .box {
     animation: gone 1s linear 15s 1 forwards;
 }
 
 
-.again2 {
-    left: 775px;
-}
+
 
 .bar {
     width: 900px;
@@ -251,14 +238,32 @@ input::before {
     animation: shown2 1s linear 15s 1 forwards;
 }
 
-@keyframes shown {
-    from{opacity: 0;}
-    to{opacity: 1; z-index: 100;}
+
+
+.again {
+    color: #f54242;
+    font-size: 25px;
+    animation: home-retry_appear 2s linears 15s 1 forwards;
+    top: 1000px;
+    z-index: -1;
+    width:  50px;
+    height: 50px;
+    margin-left: 30px;
 }
 
-@keyframes shown2 {
-    from{width: 0px; height: 0px;}
-    to{width: 50px; height: 50px;}
+
+.again2 {
+    margin-left: 275px;
+}
+
+@keyframes shown {
+    from{opacity: 0; display: none; z-index: -1;}
+    to{opacity: 1; z-index: 100; display: block;}
+}
+
+@keyframes home-retry_appear {
+    from{width: 0px;height: 0px; opacity: 0; z-index: -1; display: none;}
+    to{width: 50px; height: 50px; opacity: 1; z-index: 100; display: block;}
 }
 
 .move {
