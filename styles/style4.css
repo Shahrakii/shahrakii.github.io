@@ -228,7 +228,7 @@ input::before {
     }
 
     .again img {
-        margin-top: 250px;  
+        margin-top: 200px;  
         width: 0px;
         z-index: -1;
         height: 0px;
