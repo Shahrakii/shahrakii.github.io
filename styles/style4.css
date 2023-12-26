@@ -35,9 +35,16 @@ input {
 
 input:checked {
     counter-increment: click;
-    left: 11111px;
+    left: 593px;
+    top: -150px;
+    z-index: -1;
 }
 
+input:checked::before {
+    background-color: red;
+    width: 0vw;
+    height: 0vh;
+}
 
 .count_down {
     font-size: 40px;
@@ -54,15 +61,6 @@ input:checked {
 .count::before {
     content: "";
     animation: countdown 15s step-end 1 forwards;
-}
-
-@keyframes countdown {
-    0%  {content: "5";}
-    20% {content: "4";}
-    40% {content: "3";}
-    60% {content: "2";}
-    80% {content: "1";}
-    100% {content: "0";}
 }
 
 .gameover {
@@ -178,7 +176,13 @@ input::before {
 
 @media (max-width: 500px) {
 
-
+    input:checked {
+        counter-increment: click;
+        left: 193px;
+        top: -150px;
+        z-index: -1;
+        opacity: 0;
+    }
     
     .in-box2 {
         color: #00D2FC;
@@ -315,15 +319,6 @@ input::before {
     margin-top: 180px;
 }
 
-@keyframes countdown {
-    0%  {content: "5";}
-    20% {content: "4";}
-    40% {content: "3";}
-    60% {content: "2";}
-    80% {content: "1";}
-    100% {content: "0";}
-}
-
 .again {
     position: absolute;
     color: #f54242;
@@ -334,4 +329,22 @@ input::before {
     opacity: 0;
     animation: shown 0s linear 15s 1 forwards;
     z-index: -1;
+}
+
+@keyframes countdown {
+    0%  {content: "15";}
+    12% {content: "14";}
+    18% {content: "13";}
+    24% {content: "12";}
+    30% {content: "11";}
+    36% {content: "10";}
+    42% {content: "9";}
+    48% {content: "8";}
+    54% {content: "7";}
+    60% {content: "6";}
+    66% {content: "5";}
+    72% {content: "4";}
+    78% {content: "3";}
+    84% {content: "2";}
+   100% {content: "1";}
 }
