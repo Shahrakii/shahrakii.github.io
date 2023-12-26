@@ -38,6 +38,7 @@ input:checked {
     left: 593px;
     top: -150px;
     z-index: -1;
+    opacity: 0;
 }
 
 input:checked::before {
