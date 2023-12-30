@@ -4,10 +4,16 @@
 }
 
 body {
+    animation: pointer 4s linear 1;
     counter-reset: click; 
     overflow: hidden;  
     background-color: black;
     font-family: 'Exo 2', sans-serif;
+}
+
+@keyframes pointer {
+    from{pointer-events: none;}
+    to{pointer-events: all;}
 }
 
 
@@ -22,14 +28,14 @@ body {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
     z-index: -1;
-    animation: shown 1.8s linear 5s 1 forwards;
+    animation: shown 1.8s linear 8s 1 forwards;
 }
 
 input {
     position: absolute;
     left: 0;
     margin-top: 150px;
-    animation: shown 1s linear 5s 1 forwards;
+    animation: shown 1s linear 8s 1 forwards;
     margin-left: 760px;
 }
 
@@ -55,19 +61,19 @@ input:checked::before {
     z-index: 100;
     top: 0;
     right: 0;
-    animation: shown 1s linear 5s 1 forwards;
+    animation: shown 1s linear 8s 1 forwards;
     z-index: -1;
 }
 
 .count::before {
     content: "";
-    animation: countdown 5s step-end 1 forwards;
+    animation: countdown 8s step-end 1 forwards;
 }
 
 .gameover {
     position: absolute;
     opacity: 0;
-    animation: shown 0s linear 5s 1 forwards;
+    animation: shown 0s linear 8s 1 forwards;
     z-index: -1;
     top: 0;
     width: 100vw;
@@ -94,7 +100,7 @@ input:checked::before {
 }
 
 .box {
-    animation: gone 1s linear 5s 1 forwards;
+    animation: gone 1s linear 8s 1 forwards;
 }
 
 .bar {
@@ -105,7 +111,7 @@ input:checked::before {
     z-index: 100;
     top: 0;
     position: absolute;
-    animation: shown 1s linear 5s 1 forwards;
+    animation: shown 1s linear 8s 1 forwards;
     z-index: -1;
 }
 
@@ -113,17 +119,17 @@ input:checked::before {
 .bar::before {
     content: "";
     display: block;
-    background-color: gray;
     height: 20px;
-    animation: bar 5s linear forwards;
+    animation: bar 5s linear 3s forwards;
+    background-color: black;
 }
 
 
 @keyframes bar {
     0% {width: 0%;}
-    85% {background-color: gray; width: 85%;}
-    90% {background-color: red; width: 90%;}
-    100% {background-color: red; width: 100%;}
+    85% {background-color: #ffffff; width: 85%;}
+    90% {background-color: #ff0000; width: 90%;}
+    100% {background-color: #ff0000; width: 100%;}
 }
 
 
@@ -150,14 +156,14 @@ input::before {
     position: absolute;
     opacity: 0;
     z-index: -1;
-    animation: shown 2s linear 5s 1 forwards;
+    animation: shown 0s linear 8s 1 forwards;
     left: 585px;
 }
 
 .again2 {
     color: #f54242;
     font-size: 25px;
-    animation: home-retry_appear 2s linears 5s 1 forwards;
+    animation: home-retry_appear 2s linears 8s 1 forwards;
     z-index: -1;
     width:  50px;
     height: 50px;
@@ -192,7 +198,7 @@ input::before {
         opacity: 0;
         z-index: -1;
         top: 0px;
-        animation: shown 2s linear 5s 1 forwards;
+        animation: shown 2s linear 8s 1 forwards;
     }
 
     .bar {display: none;}
@@ -212,7 +218,7 @@ input::before {
     .game {
         position: absolute;
         opacity: 0;
-        animation: shown 0s linear 5s 1 forwards;
+        animation: shown 0s linear 8s 1 forwards;
         z-index: -1;
         top: 0;
         width: 100vw;
@@ -253,7 +259,7 @@ input::before {
     .again img {
         height: 30px!important;
         width:  30px!important;
-        animation: shown2 1s linear 5s 1 forwards;
+        animation: shown2 1s linear 8s 1 forwards;
     }
     
  
@@ -261,7 +267,7 @@ input::before {
     .again {
         color: #f54242;
         font-size: 25px;
-        animation: home-retry_appear 2s linears 5s 1 forwards;
+        animation: home-retry_appear 2s linears 8s 1 forwards;
         z-index: -1;
         width:  50px;
         height: 50px;
@@ -273,7 +279,7 @@ input::before {
     .again2 {
         color: #f54242;
         font-size: 25px;
-        animation: home-retry_appear 2s linears 5s 1 forwards;
+        animation: home-retry_appear 2s linears 8s 1 forwards;
         z-index: -1;
         width:  50px;
         height: 50px;
@@ -294,7 +300,7 @@ input::before {
 .again img {
     height: 30px!important;
     width:  30px!important;
-    animation: shown2 1s linear 5s 1 forwards;
+    animation: shown2 1s linear 8s 1 forwards;
 }
 
   
@@ -328,8 +334,29 @@ input::before {
     height: 50px;
     margin-left: 520px;
     opacity: 0;
-    animation: shown 0s linear 5s 1 forwards;
+    animation: shown 0s linear 8s 1 forwards;
     z-index: -1;
+}
+
+start- {
+    width: 100px;
+    height: 100px;
+    font-size: 150px;
+    margin-left: 668px;
+}
+
+start-::before {
+    content: "";
+    position: absolute;
+    animation: delay 3s linear 1 forwards;
+    color: white;
+}
+
+@keyframes delay {
+    0% {content: "3";}
+    33%{content: "2";}
+    66%{content: "1";}
+   100%{content: "";}
 }
 
 @keyframes countdown {
@@ -340,3 +367,4 @@ input::before {
     80% {content: "1";}
     100% {content: "0";}
 }
+
