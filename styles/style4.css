@@ -186,8 +186,26 @@ input::before {
     .again2{left: 380px;}
     .in-box2{left: 150px;}
 }
+start- {
+    width: 100px;
+    height: 100px;
+    font-size: 150px;
+    margin-left: 668px;
+}
+
+start-::before {
+    content: "";
+    position: absolute;
+    animation: delay 2.1s linear 1 forwards;
+    color: white;
+}
 
 @media (max-width: 500px) {
+
+    start- {
+        line-height:3;
+        margin-left: 150px;
+    }
 
     input:checked {
         counter-increment: click;
@@ -309,7 +327,6 @@ input::before {
     animation: shown2 1s linear 18s 1 forwards;
 }
 
-  
 
 
 
@@ -342,20 +359,6 @@ input::before {
     opacity: 0;
     animation: shown 0s linear 18s 1 forwards;
     z-index: -1;
-}
-
-start- {
-    width: 100px;
-    height: 100px;
-    font-size: 150px;
-    margin-left: 668px;
-}
-
-start-::before {
-    content: "";
-    position: absolute;
-    animation: delay 2.1s linear 1 forwards;
-    color: white;
 }
 
 @keyframes delay {
