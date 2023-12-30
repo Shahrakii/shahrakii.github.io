@@ -61,12 +61,12 @@ input:checked::before {
     z-index: 100;
     top: 0;
     right: 0;
-    animation: shown 1s linear 13s 1 forwards;
+    animation: shown 1s linear 13.1s 1 forwards;
     z-index: -1;
 }
 
 .count::before {
-    content: "";
+    content: "5";
     animation: countdown 13s step-end 1 forwards;
 }
 
@@ -135,13 +135,19 @@ input:checked::before {
 
 input::before {
     content: "";
-    background-color: #32cd32;
+    animation: background 0s linear 2.1s forwards;
     position: absolute;
     width:  31.2vw;
     height: 70vh;
     margin-left: -264.5px;
     left: 0;
+    background-color: #ff0000;
     z-index: 100;
+}
+
+@keyframes background {
+    0%  {background-color: #ff0000;}
+    100%{background-color: #32cd32;}
 }
 
 
@@ -348,7 +354,7 @@ start- {
 start-::before {
     content: "";
     position: absolute;
-    animation: delay 3s linear 1 forwards;
+    animation: delay 2.1s linear 1 forwards;
     color: white;
 }
 
