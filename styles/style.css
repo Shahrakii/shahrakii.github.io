@@ -66,8 +66,8 @@ input:checked::before {
 }
 
 .count::before {
-    content: "10";
-    animation: countdown 8s step-end 1 forwards;
+    content: "5";
+    animation: countdown 8s step-end 1s 1 forwards;
 }
 
 .gameover {
