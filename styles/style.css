@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    animation: pointer 4s linear 1;
+    counter-reset: click; 
+    overflow: hidden;  
+    background-color: black;
+    font-family: 'Exo 2', sans-serif;
+}
+
+@keyframes pointer {
+    from{pointer-events: none;}
+    to{pointer-events: all;}
+}
+
+
+.score::before {
+    content: counter(click)"/100";
+    color: white;
+    font-size: 65px;
+    padding: 5px;
+    background-color: brown;
+    border-radius: 15px;
+    top: 0px;
+    position: absolute;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: -1;
+    animation: shown 1.8s linear 8s 1 forwards;
+}
+
+input {
+    position: absolute;
+    left: 0;
+    margin-top: -150px;
+    animation: shown 1s linear 8s 1 forwards;
+    margin-left: 760px;
+}
+
+input:checked {
+    counter-increment: click;
+    left: 593px;
+    top: -150px;
+    z-index: -1;
+    opacity: 0;
+}
+
+input:checked::before {
+    background-color: red;
+    width: 0vw;
+    height: 0vh;
+}
+
+.count_down {
+    font-size: 40px;
+    font-weight: 700;
+    color: #6942f5;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    animation: shown 1s linear 8.1s 1 forwards;
+    z-index: -1;
+}
+
+.count::before {
+    content: "10";
+    animation: countdown 8s step-end 1 forwards;
+}
+
+.gameover {
+    position: absolute;
+    opacity: 0;
+    animation: shown2 0s linear 8s 1 forwards;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+
+.in-box {
+    margin-left: 10px;
+}
+
+.in-box::after {
+    content:  counter(click)"/100";
+    margin-left: 10px;
+}
+
+.box {
+    animation: gone 1s linear 8s 1 forwards;
+}
+
+.bar {
+    width: 900px;
+    height: 20px;
+    border: 2px solid white;
+    margin-left: 270px;
+    z-index: 100;
+    top: 0;
+    position: absolute;
+    animation: shown 1s linear 8s 1 forwards;
+    z-index: -1;
+}
+
+
+.bar::before {
+    content: "";
+    display: block;
+    height: 20px;
+    animation: bar 5s linear 3s forwards;
+    background-color: black;
+}
+
+
+@keyframes bar {
+    0% {width: 0%;}
+    85% {background-color: #ffffff; width: 85%;}
+    90% {background-color: #ff0000; width: 90%;}
+    100% {background-color: #ff0000; width: 100%;}
+}
+
+
+input::before {
+    content: "";
+    animation: background 0s linear 2.1s forwards;
+    position: absolute;
+    width:  31.2vw;
+    height: 70vh;
+    margin-left: -264.5px;
+    left: 0;
+    background-color: #ff0000; 
+    z-index: 100;
+}
+
+@keyframes background {
+    0%  {background-color: #ff0000;}
+    100%{background-color: #32cd32;}
+}
+
+
+.gone {
+    from {display: block;}
+    to { display: none;}
+}
+
+.in-box2 {
+    color: #00D2FC;
+    font-size: 25px;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    animation: shown2 0s linear 8s 1 forwards;
+    left: 585px;
+    top: 284px;
+}
+
+.again2 {
+    color: #f54242;
+    font-size: 25px;
+    animation: home-retry_appear 2s linears 8s 1 forwards;
+    z-index: -1;
+    width:  50px;
+    height: 50px;
+    position: relative;
+    left: 270px;
+}   
+
+@media (max-width: 1005px) {
+    input::before {left: -290px; width: 350px;}
+    .bar {
+        left: -290px;
+    }
+    .again {left: 90px;}
+    .again2{left: 380px;}
+    .in-box2{left: 150px;}
+}
+
+start- {
+    width: 100px;
+    height: 100px;
+    font-size: 150px;
+    margin-left: 668px;
+
+}
+
+start-::before {
+    content: "";
+    position: absolute;    
+    margin-top: -40px;
+    animation: delay 2.1s linear 1 forwards;
+    color: white;
+}
+
+@media (max-width: 500px) {
+
+    start- {
+        line-height:3;
+        margin-left: 150px;
+    }
+
+    input:checked {
+        counter-increment: click;
+        left: 193px;
+        top: -150px;
+        z-index: -1;
+        opacity: 0;
+    }
+    
+    .in-box2 {
+        color: #00D2FC;
+        font-size: 25px;
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        top: 0px;
+        animation: shown2 2s linear 8s 1 forwards;
+    }
+
+    .bar {display: none;}
+    input::before {left: 265px; width: 300px; height: 340px;}
+    input {
+        margin-left: 40px;
+    }
+    .again {left: 90px;}
+    .again2{left: 300px;}
+    .in-box {margin-left: -20px;}
+    .gameover {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+
+    .game {
+        position: absolute;
+        opacity: 0;
+        animation: shown2 0s linear 8s 1 forwards;
+        z-index: -1;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right,
+        #da4453, 
+        #89216b);
+        color: white;
+    }
+
+    .game::before {
+        content: "Well Played";
+        font-size: 100px;
+        font-weight: bolder;
+        position: absolute;
+        top: 50px;
+        text-align: center;
+    }
+
+    .in-box2 {
+        left: 140px;
+        margin-top: 350px;
+    }
+
+    .again img {
+        margin-top: 250px;  
+        width: 0px;
+        z-index: -1;
+        height: 0px;
+        position: absolute;
+        margin-left: 13px;
+    }
+
+
+    .again img {
+        height: 30px!important;
+        width:  30px!important;
+        animation: shown2 1s linear 8s 1 forwards;
+    }
+    
+ 
+    
+    .again {
+        color: #f54242;
+        font-size: 25px;
+        animation: home-retry_appear 2s linears 8s 1 forwards;
+        z-index: -1;
+        width:  50px;
+        height: 50px;
+        position: relative;
+        left: -450px;
+        top: 100px;
+    }
+    
+    .again2 {
+        color: #f54242;
+        font-size: 25px;
+        animation: home-retry_appear 2s linears 8s 1 forwards;
+        z-index: -1;
+        width:  50px;
+        height: 50px;
+        position: relative;
+        left: -250px;
+        top: 100px;
+    }     
+
+
+    @keyframes home-retry_appear {
+        from{width: 0px;height: 0px; opacity: 0; z-index: -1; display: none;}
+        to{width: 50px; height: 50px; opacity: 1; z-index: 100; display: block;}
+    }
+}
+
+
+
+.again img {
+    height: 30px!important;
+    width:  30px!important;
+    animation: shown2 1s linear 8s 1 forwards;
+}
+
+
+@keyframes home-retry_appear {
+    from{width: 0px;height: 0px; opacity: 0; z-index: -1; display: none;}
+    to{width: 50px; height: 50px; opacity: 1; z-index: 100; display: block;}
+}
+
+
+.again2 {
+    margin-left: 785px;
+}
+
+@keyframes shown {
+    from{opacity: 0; display: none; z-index: -1;}
+    to{opacity: 1; z-index: 100; display: block;}
+}
+
+.move {
+    margin-top: 280px;
+    margin-left: 330px;
+}
+
+.again {
+    position: absolute;
+    color: #f54242;
+    font-size: 25px;
+    width:  50px;
+    height: 50px;
+    margin-left: 520px;
+    opacity: 0;
+    animation: shown2 0s linear 8s 1 forwards;
+    z-index: -1;
+}
+
+@keyframes delay {
+    0% {content: "3";}
+    33%{content: "2";}
+    66%{content: "1";}
+   100%{content: "";}
+}
+
+
+input::before {
+    content: "";
+    animation: background 0s linear 2.1s forwards;
+    position: absolute;
+    width:  31.2vw;
+    height: 70vh;
+    margin-left: -264.5px;
+    left: 0;
+    background-color: #ff0000;
+    z-index: 100;
+}
+
+@keyframes background {
+    0%  {background-color: #ff0000;}
+    100%{background-color: #32cd32;}
+}
+
+.win::before {
+    content: "1 more click";
+    animation: background2 0s linear 2.1s forwards;
+    position: absolute;
+    margin-left: -264.5px;
+    left: 0;
+    z-index: 100;
+    background-color: #00D2FC;
+    text-align: center;
+    line-height: 8.3;
+    font-size: xxx-large;
+}
+
+.win2 {
+    position: absolute;
+    text-align: center;
+    margin-left: 550px;
+    margin-top: 50px;
+    font-size: xxx-large;
+    color: white;
+    width: 250px;
+    z-index: -1;
+}
+
+.win:checked~.win2 {
+    z-index: 100;
+}
+
+@keyframes shown {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes shown2 {
+    from{opacity: 0;}
+    to{opacity: 1; z-index: 100;}
+}
+
+@keyframes countdown {
+    0%  {content: "5";}
+    20% {content: "4";}
+    40% {content: "3";}
+    60% {content: "2";}
+    80% {content: "1";}
+    100% {content: "0";}
+}
